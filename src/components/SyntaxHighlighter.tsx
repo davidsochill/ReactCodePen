@@ -1,5 +1,5 @@
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 function TestSyntaxHighlighter() {
     const placeholderTsxCode = `const Counter = () => {
@@ -23,7 +23,7 @@ render(Counter)`
 
     return (
         <div>
-            <SyntaxHighlighter language='javascript'>
+            <SyntaxHighlighter language='tsx' style={vscDarkPlus}>
                 {placeholderTsxCode}
             </SyntaxHighlighter>
         </div>
